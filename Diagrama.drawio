@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Diagrama de Classes" id="diagrama-classes">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Classe Imoveis -->
+        <mxCell id="imoveis" value="Imoveis" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="340" height="226" as="geometry" />
+        </mxCell>
+        <mxCell id="imoveis-attr" value="- codigo : int&lt;br&gt;- contas : ArrayList&amp;lt;Conta&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" vertex="1" parent="imoveis">
+          <mxGeometry y="26" width="340" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="imoveis-sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="imoveis">
+          <mxGeometry y="72" width="340" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="imoveis-met" value="+ Imoveis(codigo : int)&lt;br&gt;+ getCodigo() : int&lt;br&gt;+ adicionarConta(conta : Conta) : void&lt;br&gt;+ calcularValorMedio() : double&lt;br&gt;+ contaMaisCara() : Conta&lt;br&gt;+ relatorioContasAcimaDaMedia() : void&lt;br&gt;+ relatorioAnual() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" vertex="1" parent="imoveis">
+          <mxGeometry y="80" width="340" height="146" as="geometry" />
+        </mxCell>
+
+        <!-- Classe Conta -->
+        <mxCell id="conta" value="Conta" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="40" width="520" height="266" as="geometry" />
+        </mxCell>
+        <mxCell id="conta-attr" value="- mesReferencia : String&lt;br&gt;- valorMesAnterior : double&lt;br&gt;- valorMesAtual : double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" vertex="1" parent="conta">
+          <mxGeometry y="26" width="520" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="conta-sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="conta">
+          <mxGeometry y="92" width="520" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="conta-met" value="+ Conta(mesReferencia : String, valorMesAnterior : double, valorMesAtual : double)&lt;br&gt;+ getMesReferencia() : String&lt;br&gt;+ getValorMesAnterior() : double&lt;br&gt;+ getValorMesAtual() : double&lt;br&gt;+ consumo() : double&lt;br&gt;+ calculoTarifa() : double&lt;br&gt;+ maisCara(outra : Conta) : boolean&lt;br&gt;+ resumo() : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" vertex="1" parent="conta">
+          <mxGeometry y="100" width="520" height="166" as="geometry" />
+        </mxCell>
+
+        <!-- Classe App -->
+        <mxCell id="app" value="App" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="420" width="300" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="app-attr" value="" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" vertex="1" parent="app">
+          <mxGeometry y="26" width="300" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="app-sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="app">
+          <mxGeometry y="34" width="300" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="app-met" value="+ main(args : String[]) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" vertex="1" parent="app">
+          <mxGeometry y="42" width="300" height="26" as="geometry" />
+        </mxCell>
+
+        <!-- Imoveis (1) ◆─── (0..12) Conta : composição -->
+        <mxCell id="rel-imoveis-conta" value="contas" style="endArrow=open;startArrow=diamondThin;startFill=1;endFill=0;startSize=14;endSize=10;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="imoveis" target="conta">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-label-1" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" vertex="1" connectable="0" parent="rel-imoveis-conta">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-label-2" value="0..12" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" vertex="1" connectable="0" parent="rel-imoveis-conta">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- App usa Imoveis (dependência) -->
+        <mxCell id="dep-app-imoveis" value="" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="app" target="imoveis">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- App usa Conta (dependência) -->
+        <mxCell id="dep-app-conta" value="" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="app" target="conta">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
